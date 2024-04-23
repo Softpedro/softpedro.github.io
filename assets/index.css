@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Outfit", sans-serif;
+}
+#mySlider, #mySlider2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#mySlider{
+  margin-bottom: 86px;
+}
+
+#mySlider .slide{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 499px;
+}
+
+.next, .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  font-size: 48px;
+  color: white;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+#mySlider2 .slides{
+  gap: 2%
+}
+#mySlider2 .slide{
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+  box-sizing: border-box;
+}
+#mySlider2 .slide figure{
+  border-radius: 8px;
+  overflow: hidden;
+}
+#mySlider2 .slide figure img{
+  display: block;
+  max-width: 100%;
+}
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slide-content{
+  padding: 8px 16px;
+}
+
+@media screen and (max-width: 768px){
+  #mySlider2 .slide{
+    flex: 0 0 32%;
+  }
+  #mySlider .slide{
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+  #mySlider{
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  #mySlider2 .slide{
+    flex: 0 0 48%;
+  }
+}
